@@ -1,0 +1,19 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code settings
+.vscode/
+
+# Log files
+*.log
+
+# Node / npm stuff
+node_modules/
+npm-debug.log*
+
+# Build / cache
+dist/
+build/
+.cache/
