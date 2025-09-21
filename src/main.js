@@ -29,3 +29,18 @@ document.addEventListener('scroll', () => {
     arrowUp.style.opacity = '0';
   }
 });
+
+// hamburger bar for mobile screen (less than 768px)
+// 1. bar - toggle(버튼 누르면 header menu display block으로 바꾸기)
+
+const headerToggle = document.querySelector('.header__toggle');
+const headerMenu = document.querySelector('.header__menu');
+
+headerToggle.addEventListener('click', () => {
+  headerMenu.classList.toggle('open');
+});
+
+// 2. item click -> move to that section -> disappear menubar
+headerMenu.addEventListener('click', () => {
+  headerMenu.classList.remove('open');
+});
