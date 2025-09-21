@@ -1,6 +1,6 @@
 // Apply dark styling for header when scroll
 const header = document.querySelector('.header');
-const headerHeight = header.getBoundingClientRect().height;
+const headerHeight = header.offsetHeight;
 
 document.addEventListener('scroll', () => {
   if (window.scrollY > headerHeight) {
@@ -8,9 +8,13 @@ document.addEventListener('scroll', () => {
   } else {
     header.classList.remove('header--dark');
   }
+});
 
-  //   const y = scrollY;
-  //   y > headerHeight
-  //     ? (header.style.backgroundColor = 'var(--color-primary)')
-  //     : (header.style.backgroundColor = 'transparent');
+//Home section fade-out
+//1. wrapped innerContent with div -> simplier
+//2. get each elements
+const home = document.querySelector('.home__container');
+const homeHeight = home.offsetHeight;
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
