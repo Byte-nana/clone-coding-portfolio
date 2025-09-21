@@ -369,7 +369,9 @@ button:focus {
   filter: brightness(70%);
 }
 /* Arrow up */
+
 .arrow-up {
+  opacity: 0;
   background-color: var(--color-primary);
   position: fixed;
   bottom: 3rem;
@@ -381,6 +383,7 @@ button:focus {
   text-align: center;
   line-height: 4.5rem;
   box-shadow: 5px 5px 0px 0px var(--color-accent);
+  transition: opacity 300ms ease;
 }
 /* Footer */
 #contact {
