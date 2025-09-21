@@ -380,7 +380,6 @@ button:focus {
   filter: brightness(70%);
 }
 /* Arrow up */
-
 .arrow-up {
   opacity: 0;
   background-color: var(--color-primary);
