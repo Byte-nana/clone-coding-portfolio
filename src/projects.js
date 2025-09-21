@@ -16,19 +16,8 @@ categories.addEventListener('click', (e) => {
 
   if (filter == null) return;
 
-  //reset button
-  const active = document.querySelector('.category--selected');
-  active.classList.remove('category--selected');
-  e.target.classList.add('category--selected');
-
-  //filter projects
-  projects.forEach((project) => {
-    if (filter === 'all' || project.dataset.type === filter) {
-      project.style.display = 'block';
-    } else {
-      project.style.display = 'none';
-    }
-  });
+  handleActiveSelection(e.target);
+  filterProjects(filter);
 
   //animation
   projectsContainer.classList.add('anim-out');
@@ -36,3 +25,19 @@ categories.addEventListener('click', (e) => {
     projectsContainer.classList.remove('anim-out');
   }, 250);
 });
+
+function handleActiveSelection(target) {
+  const active = document.querySelector('.category--selected');
+  active.classList.remove('category--selected');
+  target.classList.add('category--selected');
+}
+
+function filterProjects(filter) {
+  projects.forEach((project) => {
+    if (filter === 'all' || project.dataset.type === filter) {
+      project.style.display = 'block';
+    } else {
+      project.style.display = 'none';
+    }
+  });
+}
