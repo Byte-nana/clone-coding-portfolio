@@ -20,7 +20,9 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Opna Sans', sans-serif;
   margin: 0;
